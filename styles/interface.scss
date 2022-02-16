@@ -1,0 +1,138 @@
+@import '../styles/partials/_fonts'; as *
+
+html,
+body {
+    font-family: 'Source Code Pro';
+    background-color: black;
+    
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'Source Code Pro';
+    font-weight: 400;
+    color: white;
+
+    &__title {
+        font-weight:400;
+        margin-top: 0;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .1rem solid rgba(255, 255, 255, 0.63); /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+            typing 1.8s steps(25, end), blink-caret .75s step-end infinite;
+
+
+        /* The typing effect */
+        @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: rgba(255, 255, 255, 0.63); }
+        }
+
+    }
+    
+    &__subtitle {
+        font-weight: 300;
+    }
+
+    &__container {
+        margin-top: 10rem;
+    }
+}
+
+
+button {
+    padding:10px;
+    background-color: white;
+    color: black;
+    border: 0px;
+    cursor:pointer;
+    border-radius: 5px;
+    font-family: 'Source Code Pro';
+    font-weight: 300;
+}
+#output {
+    color:white;
+    padding:10px;
+    width: 100%;
+    margin-top:20px;
+    line-height:30px;
+    font-size: 1rem;
+    font-weight: 300;
+
+}
+.hide {
+    display:none !important;
+}
+.show {
+    display:block;
+}
+
+#languages-container {
+    // margin-top: 5rem;
+    border: .15rem solid white;
+    // max-height: 20rem;
+    // max-width: 20rem;
+    display: flex;
+    // overflow: scroll;
+    margin-top: 2rem;
+}
+.language-list{
+    // list-style-type: none;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: 0.25rem;
+    max-width: 8rem;
+    max-height: 10rem;
+    padding: 0;
+    list-style-type: none;
+    &-item {
+    text-align: center;
+    // max-height: 10rem;
+    // max-width: 10rem;
+    // padding-left: 1rem;
+    // margin-bottom: 1rem;
+    border-bottom: .15rem solid white ;
+    cursor: pointer;
+    overflow-y: scroll;
+    }
+}
+.language-list ::-webkit-scrollbar {
+        display: none;
+    }
+.language-item::-webkit-scrollbar {
+        display: none;
+    }
+.language-item {
+    text-align: center;
+    max-height: 4rem;
+    max-width: 6rem;
+    padding: 0.5rem;
+    // padding-left: 1rem;
+    // margin-bottom: 1rem;
+    border-bottom: 2px solid white ;
+    cursor: pointer;
+    // overflow-y: scroll;
+    font-size: .5rem;
+}
+
+.languages-prompt {
+    font-size: .5rem;    
+    padding-left: 1rem;
+    
+}

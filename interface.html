@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/interface.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <title>Document</title>
+    
+</head>
+<body>
+    <main class="main">
+        <div>
+        <h2 class="main__title">Talkback</h2>
+        </div>
+        <div class="main__container">
+            <p class="main__subtitle">Click the button to speak</p>
+            <p><button type="button" onclick="runSpeechRecognition()">Speak</button> &nbsp; <span id="action"></span></p>
+        </div>
+        <div id="output" class="hide"></div>
+        <div class="translation">
+        </div>
+        <div class="translation"></div>
+        <div class="result-box">
+        </div>
+        <div id="languages-container" class="hide">
+            <p class="languages-prompt">Choose language to translate to:</p>
+                <ul class="language-list">
+                    
+<!--            HTML below provided via API calls. Up to 120 languages.  
+                
+                <li class="language-item">Punjabi : pa</li>
+                <li class="language-item">Romanian : ro</li>
+                <li class="language-item">Romansh : rm</li>
+                <li class="language-item">Russian : ru</li>
+                <li class="language-item">Samoan : sm</li>
+                <li class="language-item">Scots Gaelic : gd</li>
+                <li class="language-item">Serbian : sr</li>
+                <li class="language-item">Serrano : ser</li>
+                <li class="language-item">Sesotho : st</li> -->
+
+                </ul>
+        </div>
+        </div>
+    </main>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<script src="../scripts/interface.js"></script>
+</body>
+</html>
